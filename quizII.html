@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> PYTHON Programming Lab</title>
+  <title>OOPS with Java Programming Lab</title>
   <link rel="stylesheet" href="style.css">
     <style>
     body {
@@ -125,24 +125,67 @@
       </div>
     </div>
     <div class="orange-line"></div>
-    <h2 align="left" style="color:#4a90e2"><div class="section"><a href="#">Computer Science and Engineering</a> > <a href="/VL---OOPS/index.html"> PYTHON Programming Lab</a> > <a href="/VL---OOPS/LOE.html">Experiments</a></div></h2>
+    <h2 align="left" style="color:#4a90e2"><div class="section"><a href="#">Computer Science and Engineering</a> > <a href="/VL---OOPS/index.html">PYTHON Programming Lab</a> > <a href="/VL---OOPS/LOE.html">Experiments</a></div></h2>
+    <div class="grey-line"></div>
   </header>
 
   <main class="content">
-   <h1 align="center">Function in PYTHON - I</h1><div class="section">
-  <p><strong><big>Steps of simulator:</big></strong></p>
-   <p>
-     1. Read the simulator details.<br>
-2. Enter the values you want to operate.<br>
-3. Select the desired type of operation from the operations list.<br>
-4. Press START to proceed.<br>
-5. Press NEXT to see the execution of the code.<br>
-6. Relevant line in the code will be highlighted.<br>
-7. The local variables will be shown in the Output Panel with their values.
-   </p>
-   </div>
+   <h1 align="center">Functions in Python - II</h1>
+   <hr color="whitesmoke">
   </main>
-       <!-- Modal Menu -->
+  <div class="container">
+    <form id="quizForm">
+      <div class="section">
+  <p><strong>1. Which of the following is the correct syntax to define a function in Python?</strong></p>
+  <label><input type="radio" name="q1" value="a"> a: function myFunc():</label><br>
+  <label><input type="radio" name="q1" value="b"> b: def myFunc():</label><br>
+  <label><input type="radio" name="q1" value="c"> c: create myFunc():</label><br>
+  <label><input type="radio" name="q1" value="d"> d: define myFunc():</label>
+</div>
+
+<div class="section">
+  <p><strong>2. What will be the output of the following code?</strong></p>
+  <p><code>
+  def add(a, b):<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;return a + b<br>
+  print(add(2,3))
+  </code></p>
+  <label><input type="radio" name="q2" value="a"> a: 23</label><br>
+  <label><input type="radio" name="q2" value="b"> b: 5</label><br>
+  <label><input type="radio" name="q2" value="c"> c: Error</label><br>
+  <label><input type="radio" name="q2" value="d"> d: None</label>
+</div>
+
+<div class="section">
+  <p><strong>3. Which keyword is used to send a value back from a function?</strong></p>
+  <label><input type="radio" name="q3" value="a"> a: break</label><br>
+  <label><input type="radio" name="q3" value="b"> b: return</label><br>
+  <label><input type="radio" name="q3" value="c"> c: print</label><br>
+  <label><input type="radio" name="q3" value="d"> d: pass</label>
+</div>
+
+<div class="section">
+  <p><strong>4. What is the purpose of *args in a function?</strong></p>
+  <label><input type="radio" name="q4" value="a"> a: To accept multiple positional arguments</label><br>
+  <label><input type="radio" name="q4" value="b"> b: To stop function execution</label><br>
+  <label><input type="radio" name="q4" value="c"> c: To create a loop</label><br>
+  <label><input type="radio" name="q4" value="d"> d: To define a condition</label>
+</div>
+
+<div class="section">
+  <p><strong>5. What is a lambda function in Python?</strong></p>
+  <label><input type="radio" name="q5" value="a"> a: A function with no name</label><br>
+  <label><input type="radio" name="q5" value="b"> b: A type of loop</label><br>
+  <label><input type="radio" name="q5" value="c"> c: A conditional statement</label><br>
+  <label><input type="radio" name="q5" value="d"> d: A class method</label>
+</div>
+      
+
+      <button type="button" onclick="checkAnswersII()">Submit Quiz</button>
+      <p id="result"></p>
+    </form>
+  </div>
+      <!-- Modal Menu -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal">
       <div class="modal-header">
@@ -152,8 +195,8 @@
       <ul class="modal-menu">
         <li><a href=AO3.html>Aim</a></li>
         <li><a href=OIJIII.html>Theory</a></li>
-        <li><a href=quizII.html>Pretest</a></li>
-        <li><a href=pro.html class="active">Procedure</a></li>
+        <li><a href=quizII.html class="active">Pretest</a></li>
+        <li><a href=pro.html>Procedure</a></li>
         <li><a href=sim.html>Simulation</a></li>
         <li><a href="posttt.html">Posttest</a></li>
         <li><a href=ref.html>References</a></li>
@@ -161,8 +204,9 @@
       </ul>
     </div>
   </div>
-   <script src="script.js"></script>
-   <button class="bug-button" onclick="showPopup()"></button>
+  <script src="script.js"></script>
+  
+  <button class="bug-button" onclick="showPopup()"></button>
 
 <div class="popup" id="bugPopup">
   <div class="popup-header">

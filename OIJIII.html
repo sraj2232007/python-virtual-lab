@@ -126,23 +126,113 @@
     </div>
     <div class="orange-line"></div>
     <h2 align="left" style="color:#4a90e2"><div class="section"><a href="#">Computer Science and Engineering</a> > <a href="/VL---OOPS/index.html"> PYTHON Programming Lab</a> > <a href="/VL---OOPS/LOE.html">Experiments</a></div></h2>
+    <div class="grey-line"></div>
   </header>
 
   <main class="content">
-   <h1 align="center">Function in PYTHON - I</h1><div class="section">
-  <p><strong><big>Steps of simulator:</big></strong></p>
-   <p>
-     1. Read the simulator details.<br>
-2. Enter the values you want to operate.<br>
-3. Select the desired type of operation from the operations list.<br>
-4. Press START to proceed.<br>
-5. Press NEXT to see the execution of the code.<br>
-6. Relevant line in the code will be highlighted.<br>
-7. The local variables will be shown in the Output Panel with their values.
-   </p>
-   </div>
+   <h1 align="center">Functions in Python - III</h1>
   </main>
-       <!-- Modal Menu -->
+  <p><div class="section">
+   Python Functions are reusable and structured blocks of code designed to perform specific tasks efficiently. They help in organizing a program into smaller, manageable, and modular sections. Functions improve code readability, reduce repetition, and enhance maintainability. By using functions, complex problems can be broken down into simpler parts, making programs easier to understand and debug.
+
+In this lab, you will study different types of functions in Python, including user-defined functions, functions with parameters, return values, recursive functions, lambda functions, and functions with variable-length arguments.
+ </div> </p>
+
+ <div class="section">
+    <h1>Function in Python</h1></div>
+  <p><div class="section">Python provides several ways to make decisions:</div></p>
+
+  <div class="section">
+<h1>Functions in Python – Practice Questions</h1>
+<p>Below are function-based programming questions with their implementation.</p>
+</div>
+
+<div class="section">
+<h2>Q1. Write a function to check whether a number is even or odd.</h2>
+<pre>
+def check_even_odd(num):
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "Odd"
+
+print(check_even_odd(10))
+</pre>
+</div>
+
+<div class="section">
+<h2>Q2. Write a function to calculate the factorial of a number.</h2>
+<pre>
+def factorial(n):
+    if n == 1:
+        return 1
+    return n * factorial(n-1)
+
+print(factorial(5))
+</pre>
+</div>
+
+<div class="section">
+<h2>Q3. Write a function to find the largest of three numbers.</h2>
+<pre>
+def largest(a, b, c):
+    return max(a, b, c)
+
+print(largest(10, 25, 15))
+</pre>
+</div>
+
+<div class="section">
+<h2>Q4. Write a function that returns the sum of all elements in a list.</h2>
+<pre>
+def list_sum(lst):
+    return sum(lst)
+
+print(list_sum([2,4,6,8]))
+</pre>
+</div>
+
+<div class="section">
+<h2>Q5. Write a function to check whether a string is a palindrome.</h2>
+<pre>
+def is_palindrome(text):
+    return text == text[::-1]
+
+print(is_palindrome("madam"))
+</pre>
+</div>
+
+<div class="section">
+<h2>Q6. Write a function using *args to find the average of numbers.</h2>
+<pre>
+def average(*numbers):
+    return sum(numbers)/len(numbers)
+
+print(average(10,20,30))
+</pre>
+</div>
+
+<div class="section">
+<h2>Q7. Write a lambda function to find the square of a number.</h2>
+<pre>
+square = lambda x: x*x
+print(square(7))
+</pre>
+</div>
+
+<div class="section">
+<h2>Q8. Write a function that returns multiple values (addition and multiplication).</h2>
+<pre>
+def operations(a, b):
+    return a+b, a*b
+
+add, mul = operations(5,3)
+print("Addition:", add)
+print("Multiplication:", mul)
+</pre>
+</div>
+  
+    <!-- Modal Menu -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal">
       <div class="modal-header">
@@ -151,9 +241,9 @@
       </div>
       <ul class="modal-menu">
         <li><a href=AO3.html>Aim</a></li>
-        <li><a href=OIJIII.html>Theory</a></li>
+        <li><a href=OIJIII.html class="active">Theory</a></li>
         <li><a href=quizII.html>Pretest</a></li>
-        <li><a href=pro.html class="active">Procedure</a></li>
+        <li><a href=pro.html>Procedure</a></li>
         <li><a href=sim.html>Simulation</a></li>
         <li><a href="posttt.html">Posttest</a></li>
         <li><a href=ref.html>References</a></li>

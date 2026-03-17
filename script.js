@@ -1,8 +1,8 @@
-function checkAnswersII() {
+function checkAnswersI() {
   const correctAnswers = {
-    q1: "b",
+    q1: "c",
     q2: "b",
-    q3: "a",
+    q3: "c",
     q4: "a",
     q5: "b"
   };
@@ -31,11 +31,11 @@ function checkAnswersII() {
 }
 
 
-function checkAnswers2() {
+function checkAnswers1() {
   const correctAnswers = {
-    q1: "b",
+    q1: "c",
     q2: "b",
-    q3: "a",
+    q3: "c",
     q4: "a",
     q5: "b"
   };
