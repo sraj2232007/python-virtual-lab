@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Python Condition Simulator</title>
+
+<style>
+:root {
+  --bg: #3cdbf0;
+  --card: #4897cf;
+  --text: #e2e8f0;
+  --accent: #df1b1b;
+  --green: #22c55e;
+  --red: #ef4444;
+}
+
+/* Reset */
+* { box-sizing: border-box; margin:0; padding:0; }
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding-top: 90px; /* space for header */
+  display: grid;
+  place-items: center;
+}
+
+/* ===== HEADER ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: #0f172a;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #38bdf8;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+/* ===== CARD ===== */
+.container {
+  background: var(--card);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  border: 1px solid #334155;
+}
+
+h1 {
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.inputs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+input[type="number"] {
+  flex: 1;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  background: #0f172a;
+  border: 2px solid #334155;
+  color: white;
+  border-radius: 0.6rem;
+  font-family: monospace;
+}
+
+input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+select {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.1rem;
+  background: #0f172a;
+  border: 2px solid #334155;
+  color: white;
+  border-radius: 0.6rem;
+  margin-bottom: 1.5rem;
+  font-family: monospace;
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #0a5ce1, #4d7ddb);
+  color: white;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+#result {
+  margin-top: 1.8rem;
+  padding: 1.2rem;
+  border-radius: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  background: #0f172a;
+  border: 2px solid #334155;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: monospace;
+}
+
+.true  { background: rgba(34,197,94,0.15); border-color: var(--green); color: var(--green); }
+.false { background: rgba(239,68,68,0.15); border-color: var(--red); color: var(--red); }
+
+</style>
+</head>
+
+<body>
+
+<header>
+  Computer Science and Engineering
+</header>
+
+<div class="container">
+  <h1>Python Condition Tester</h1>
+
+  <div class="inputs">
+    <input type="number" id="a" placeholder="First number" value="15">
+    <input type="number" id="b" placeholder="Second number" value="7">
+  </div>
+
+  <select id="op">
+    <option value=">">&gt; (greater than)</option>
+    <option value="<">&lt; (less than)</option>
+    <option value="==" selected>== (equal to)</option>
+    <option value="!=">!= (not equal)</option>
+    <option value=">=">&gt;= (greater or equal)</option>
+    <option value="<=">&lt;= (less or equal)</option>
+  </select>
+
+  <button onclick="run()">Evaluate Condition</button>
+
+  <div id="result">Result will appear here</div>
+</div>
+
+<script>
+function run() {
+  const a = Number(document.getElementById('a').value);
+  const b = Number(document.getElementById('b').value);
+  const op = document.getElementById('op').value;
+  const resEl = document.getElementById('result');
+
+  if (isNaN(a) || isNaN(b)) {
+    resEl.textContent = "Please enter valid numbers";
+    resEl.className = "";
+    return;
+  }
+
+  let result;
+  switch(op) {
+    case ">":  result = a > b; break;
+    case "<":  result = a < b; break;
+    case "==": result = a === b; break;
+    case "!=": result = a !== b; break;
+    case ">=": result = a >= b; break;
+    case "<=": result = a <= b; break;
+  }
+
+  resEl.innerHTML = `${a} ${op} ${b}  →  ${result ? "True" : "False"}`;
+  resEl.className = result ? "true" : "false";
+}
+
+document.querySelectorAll('input, select').forEach(el => {
+  el.addEventListener('input', run);
+});
+</script>
+
+</body>
+</html>

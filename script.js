@@ -1,15 +1,10 @@
-function checkAnswers() {
+function checkAnswersII() {
   const correctAnswers = {
     q1: "b",
     q2: "b",
     q3: "a",
-    q4: "c",
-    q5: "b",
-    q6: "b",
-    q7: "c",
-    q8: "a",
-    q9: "a",
-    q10: "a"
+    q4: "a",
+    q5: "b"
   };
 
   let score = 0;
@@ -36,18 +31,13 @@ function checkAnswers() {
 }
 
 
-function checkAnswers1() {
+function checkAnswers2() {
   const correctAnswers = {
-    q11: "b",
-    q12: "c",
-    q13: "b",
-    q14: "a",
-    q15: "b",
-    q16: "d",
-    q17: "a",
-    q18: "d",
-    q19: "c",
-    q20: "b"
+    q1: "b",
+    q2: "b",
+    q3: "a",
+    q4: "a",
+    q5: "b"
   };
 
   let score = 0;
